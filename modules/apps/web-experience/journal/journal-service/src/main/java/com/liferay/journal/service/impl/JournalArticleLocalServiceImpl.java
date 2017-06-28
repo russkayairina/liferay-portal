@@ -662,7 +662,9 @@ public class JournalArticleLocalServiceImpl
 	}
 
 	/**
-	 * Checks all web content articles by handling their expirations and sending
+	 * Checks all web content articles by handling their expirations and 
+	 
+	 ing
 	 * review notifications based on their current workflow.
 	 */
 	@Override
@@ -7522,10 +7524,10 @@ public class JournalArticleLocalServiceImpl
 		else if (emailType.equals("requested")) {
 			localizedSubjectMap = LocalizationUtil.getMap(
 				journalGroupServiceConfiguration.
-					emailArticleApprovalGrantedSubject());
+					emailArticleApprovalRequestedSubject());
 			localizedBodyMap = LocalizationUtil.getMap(
 				journalGroupServiceConfiguration.
-					emailArticleApprovalGrantedBody());
+					emailArticleApprovalRequestedBody());
 		}
 		else if (emailType.equals("review")) {
 			localizedSubjectMap = LocalizationUtil.getMap(
